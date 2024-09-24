@@ -71,3 +71,33 @@ exports.sendMailForgat = async (req, res) => {
   );
   res.json("send mail");
 };
+
+exports.changePassword = async (req, res) => {
+  const { emailid, password, confirmpassword } = req.body;
+  console.log(emailid);
+  const user = await User.findOne({ emailid: emailid });
+  if (!user) {
+    res.json({
+      success: false,
+      message: "something went wrong link",
+    });
+  }
+  if (password !== confirmpassword) {
+    res.json({
+      success: false,
+      message: "confirm password not match",
+    });
+  }
+  const hashpass = await hashpassword(password);
+  const update = await User.updateOne(
+    {
+      emailid: emailid,
+    },
+    {
+      password: hashpass,
+    }
+  );
+  if (update) {
+    res.redirect("/signin");
+  }
+};

@@ -12,7 +12,7 @@
       name="description"
       content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework" />
     <meta name="robots" content="noindex,nofollow" />
-    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <title>Blog Api</title>
     <!-- Favicon icon -->
     <link
       rel="icon"
@@ -352,18 +352,12 @@
           <!-- Sidebar navigation-->
           <nav class="sidebar-nav">
             <ul id="sidebarnav" class="pt-4">
-        
+
+              <
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
                   href="/"
-                  aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                    class="hide-menu">Dashboard</span></a>
-              </li>
-              <li class="sidebar-item">
-                <a
-                  class="sidebar-link waves-effect waves-dark sidebar-link"
-                  href="/blog_add"
                   aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
                     class="hide-menu">Blog_Add</span></a>
               </li>
@@ -389,46 +383,38 @@
       <!-- ============================================================== -->
       <div class="page-wrapper">
         <div class="container col-8">
-            <form action="/api/blog/"
-                class="border shadow-lg p-3 mb-5 bg-body rounded mt-5 shadow"
-                method="post" enctype="multipart/form-data">
-                <h2 class="text-center">Blog Add Page</h2>
-                <div class="form-group mt-3">
-                    <label>Blog Image</label>
-                    <input type="file"  class="form-control mt-3" name="blog_image">
-                </div>
+          <form action="/api/blog/"
+            class="border shadow-lg p-3 mb-5 bg-body rounded mt-5 shadow"
+            method="post" enctype="multipart/form-data">
+            <h2 class="text-center">Blog Add Page</h2>
+            <div class="form-group mt-3">
+              <label>Blog Image</label>
+              <input type="file" class="form-control mt-3" name="blog_image">
+            </div>
 
-                <div class="form-group mt-3">
-                    <label>Blog Title</label>
-                    <input type="text" class="form-control mt-3"
-                        placeholder="Blog Title" name="blog_title">
-                </div>
-                <div class="form-group mt-3">
-                    <label>Blog Description </label>
-                    <textarea type="text" name="blog_description" class="form-control mt-3"
-                        placeholder="Blog Description"></textarea>
-                    
+            <div class="form-group mt-3">
+              <label>Blog Title</label>
+              <input type="text" class="form-control mt-3"
+                placeholder="Blog Title" name="blog_title">
+            </div>
+            <div class="form-group mt-3">
+              <label>Blog Description </label>
+              <textarea type="text" name="blog_description"
+                class="form-control mt-3"
+                placeholder="Blog Description"></textarea>
 
-                </div>
-                <div class="form-group mt-3">
-                    <label>About Blog</label>
-                    <textarea type="text" name="about_blog"
-                        class="form-control mt-3" placeholder="About Blog"></textarea>
-                </div>
-             
+            </div>
+            <div class="form-group mt-3">
+              <label>About Blog</label>
+              <textarea type="text" name="about_blog"
+                class="form-control mt-3" placeholder="About Blog"></textarea>
+            </div>
 
-                <button type="submit" class="btn btn-primary mt-3">Submit</button>
-            </form>
+            <a href="/view_blog" type="submit" class="btn btn-primary mt-3">Submit</a>
+          </form>
 
         </div>
-        <!-- footer -->
-        <!-- ============================================================== -->
-        <footer class="footer text-center">
-          All Rights Reserved by Matrix-admin. Designed and Developed by
-          <a href="https://www.wrappixel.com">WrapPixel</a>.
-        </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
+
         <!-- ============================================================== -->
       </div>
       <!-- ============================================================== -->

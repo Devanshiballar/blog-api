@@ -32,7 +32,7 @@ app.get("/", (req, res) => {
     res.redirect("/signin");
   }
   const admin = req.cookies.admin;
-  res.render("index", {
+  res.render("blog_add", {
     admin: admin,
   });
 });
